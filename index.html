@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://trxcoin.fund/app/welcome/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link href="./Welcome_files/layout.css" rel="stylesheet">
+
+  <style type="text/css">
+    body {
+      background-image: url("./Welcome_files/best_bg2.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    #left {
+      float: left;
+      margin-left: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      background-image: url("./Welcome_files/button_bg.png");
+      background-size: cover;
+      background-position: center;
+
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: aliceblue;
+    }
+
+    #right {
+      float: right;
+      display: none;
+      margin-right: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      background-image: url("./Welcome_files/button_bg.png");
+      background-size: cover;
+      background-position: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: aliceblue;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+
+    .box {
+      /* 投影效果 */
+      -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    }
+
+    p {
+      color: rgb(255, 255, 255);
+      font-size: 25px;
+      /* 字间距 */
+      letter-spacing: 5px;
+      text-align: center;
+      line-height: 30px;
+      outline: none;
+      /* 自定义属性 --c,可通过 var 函数对其调用 */
+      --c: lightseagreen;
+      /* 调用自定义属性--c，设置文字阴影（发光效果） */
+      text-shadow: 0 0 10px var(--c),
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+      /* 执行动画：动画名 时长 线性的 无限次播放 */
+      animation: animate 5s linear infinite;
+    }
+
+    /* 定义动画 */
+    @keyframes animate {
+      to {
+        /* 色相旋转过滤镜（设置度数可改变颜色） */
+        filter: hue-rotate(360deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <container>
+    <div class="banner">
+
+      <span id="left" style="font-size: 40px;">AD <span id="time">15</span> S</span>
+      <span id="right" class="close" style="font-size: 40px;">X Close</span>
+      <!-- <img src="./Welcome_files/banner.png"> -->
+      <video src="./Welcome_files/eldoah.mp4" autoplay width="100%"></video>
+
+
+    </div>
+
+    <div class="btns">
+      <div class="btn-item">
+        <img height="220px">
+        <div class="btn-item-content">
+          <div class="box">
+            <p class="p1">Join in us to get 50 piso</p>
+            <p class="p2">Please register now to start betting </p>
+          </div>
+          <a class="btn" href="https://okbet10.com/cdn">
+            <img src="./Welcome_files/btn01.png">
+            <span>Enter the registration page</span>
+          </a>
+        </div>
+      </div>
+      <div class="btn-item">
+        <img height="200px">
+        <div class="btn-item-content">
+          <p class="p1">If you meet problem</p>
+          <p class="p2">Way to wealth</p>
+          <a class="btn" href="https://t.me/OKBET_Customer_Service">
+            <img src="./Welcome_files/btn01.png">
+            <span>Contact Customer Service</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="tips">
+      <p>24 hours open. You can betting Game at any time and enjoy the high odds.</p>
+      <p>The best way to generate automatic income every day.</p>
+      <p>The This is an official online gambling game, certified by PAGCOR.</p>
+    </div>
+  </container>
+</body>
+<script type="text/javascript">
+  var time = document.getElementById("time");
+  var realtime = time.innerHTML;
+
+  var left = document.getElementById("left")
+  var close = document.querySelector('.close');
+
+  //设置定时器 多次触发，所以用 setInterval
+  var timer = setInterval(daojishi, 1000);
+
+  function daojishi() {
+    realtime--;
+    time.innerHTML = realtime;
+    if (realtime <= 0) {
+      left.style.visibility = "hidden"
+      close.style.display = 'block';
+      left
+      // clearTimeout(timer);   //虽然可以混用，但是不建议，会造成歧义
+      clearInterval(timer);
+
+    }
+
+  }
+  //关闭按钮事件
+  close.onclick = function () {
+    window.location.href = "http://google.com/cnm-bie-zhua-bao";
+  }
+
+</script>
+
+</html>
