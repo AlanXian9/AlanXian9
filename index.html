@@ -9,15 +9,12 @@
   <link href="./Welcome_files/layout.css" rel="stylesheet">
 
   <style type="text/css">
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
     html,
     body {
       width: 100%;
       height: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     body {
@@ -47,8 +44,8 @@
     }
 
     #right {
-      width: 25px;
-      height: 25px;
+      width: 23px;
+      height: 23px;
       position:absolute;
       right:0px;
       
@@ -178,7 +175,11 @@
 
   }
   jing.onclick = function() {
-    adG.style.display = 'block';
+    if(adG.style.display == 'none'){
+      adG.style.display = 'block';
+    }else{
+      adG.style.display = 'none';
+    }
   }
 
   //关闭按钮事件
